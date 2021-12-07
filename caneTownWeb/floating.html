@@ -12,10 +12,35 @@
 </head>
 <body>
     <div class="container">
+        <h1 class="grey-text">
+            Floating Buttons
+        </h1>
+        <button class="btn-large waves-effect red btn-floating pulse"><i class="material-icons">add</i></button>
+        <br><br>
+
+        <!-- fixed action button -->
+        <div class="fixed-action-btn toolbar">
+            <a class="btn-floating btn-large red">
+              <i class="large material-icons">mode_edit</i>
+            </a>
+            <ul>
+              <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+              <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+              <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+              <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+            </ul>
+          </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <script>
+     $(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton({
+        toolbarEnabled: true
+    });
+  });
     </script>
 </body>
 </html>
