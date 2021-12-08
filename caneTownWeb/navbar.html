@@ -11,11 +11,38 @@
     <title>Floating Action Buttons</title>
 </head>
 <body>
-    <div class="container">
-    </div>
+    <nav> <!-- navbar content here  -->
+        <div class="nav-wrapped">
+            <a href="" class="brand-logo center">LOGO</a>
+                <ul id="nav-mobile" class="left hide-on-small-only">
+                    <li><a href="#">JAVASCRIPT</a></li>
+                    <li><a href="#">SASS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+                <ul id="slide-out" class="sidenav">
+                    <li>
+                        <div class="user-view">
+                        </div>
+                        <a href="#">JAVASCRIPT</a>
+                        <a href="#">SASS</a>
+                        <a href="#">ABOUT</a>
+                    </li>  
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small"><i class="material-icons">dehaze</i></a>
+        </div>
+    </nav>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav({
+                edge: 'right',
+                draggable: true
+            }
+            );
+        });
     </script>
 </body>
 </html>
