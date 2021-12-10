@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Date and Time Picker</title>
+</head>
+<style>
+    .datepicker-date-display{
+        background-color: blueviolet;
+    }
+    .datepicker-cancel{
+        display: none;
+    }
+    .datepicker-done{
+        display: none;
+    }
+    .datepicker-day-button{
+        color: blueviolet;
+    }
+
+    .datepicker-day-button:active{
+        background-color: tomato;
+    }
+
+    .timepicker-digital-display{
+        background-color: blueviolet;
+    }
+
+    .timepicker-canvas line {
+    stroke: blueviolet;
+    }
+
+    .timepicker-canvas-bg, .timepicker-canvas-bearing {
+    fill: blueviolet;
+    color: white;
+    }
+
+</style>
+<body class="grey darken-1">
+    <div class="container">
+        <h4 class="white-text">FORMS</h4>
+
+        <div class="input-field">
+            <input type="text" class="datepicker white-text">
+            <label for="date">Choose a date</label>
+        </div>
+
+        <div class="input-field">
+            <input type="text" class="timepicker white-text">
+            <label for="time">Update time</label>
+        </div>
+        <!-- Material Image -->
+        <img class="materialboxed responsive-img" width="650" src="./img/deer.jpg">
+    </div>
+
+<!-- Slider -->
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+
+        let date = new Date;
+        let time = date.setTime
+
+        $(document).ready(function(){
+            $('.datepicker').datepicker({
+                autoClose: true,
+                defaultDate: date
+            })
+        
+
+            $('.timepicker').timepicker({
+                defaultTime: time
+            });
+
+            $('.materialboxed').materialbox();
+
+            $('.slider').slider({
+                height: 500,
+                indicators: false,
+                interval: 1000
+            });
+        })
+    </script>
+</body>
+</html>
