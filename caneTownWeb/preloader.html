@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Preloader</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .progress{
+        background-color: rgb(231, 136, 119);
+    }
+
+    /* determinate */
+    .progress .determinate{
+        transition: 2.0s linear;
+        background-color: rgba(201, 44, 16, 0.637);
+    }
+
+    .progress .indeterminate{
+        background-color: rgba(201, 44, 16, 0.637);
+    }
+
+    .preloader-wrapper{
+        position: absolute;
+    }
+
+
+</style>
+
+<body class="grey darken-2">
+    
+    <div class="container">
+
+
+
+
+    <!-- Determinate -->
+        <!-- <div class="progress">
+            <div id = "load" class="determinate"></div>
+        </div> -->
+    <!-- ------------------------------------------ -->
+
+
+
+
+
+    <!-- Indeterminate -->
+        <!-- <div class="progress">
+            <div class="indeterminate"></div>
+        </div> -->
+    <!-- ------------------------------------------ -->
+
+
+
+
+
+    <!-- Circular -->
+    <!-- <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle">
+                        </div>
+                    </div>
+        </div>
+    </div>
+
+    <div class="preloader-wrapper active">
+        <div class="spinner-layer spinner-red-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle">
+                    </div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+        </div>
+    </div>
+    
+    <div class="preloader-wrapper small active">
+        <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+        </div>
+    </div> -->
+    <!-- --------------------------------------------------------------- -->
+
+
+
+
+    <!-- Circular Flashing Colors -->
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+                <div class="gap-patch">
+                    <div class="circle"></div>
+                </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+        </div>
+
+    </div>
+    <!-- ---------------------------------------------------------------- -->
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+        // determine--------------------------------------
+        let determine = document.getElementById('load');
+        let loadTotal = 0;
+
+        setInterval(() => {
+            determine.style.width = `${loadTotal+=10}%`
+            if(loadTotal == 100){
+            loadTotal = 0;
+        }
+        }, 2000)
+
+    
+// -------------------------------------------------------
+        
+
+    </script>
+</body>
+</html>

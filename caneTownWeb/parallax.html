@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Modal</title>
+</head>
+<style>
+    body{
+        height: 2000px;
+    }
+</style>
+
+<body class="grey darken-2">
+    <div class="navbar-fixed">
+    <nav> <!-- navbar content here  -->
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo center">LOGO</a>
+                <ul id="nav-mobile" class="left hide-on-small-only table-of-contents">
+                    <li><a href="#javas">JAVASCRIPT</a></li>
+                    <li><a href="#">SASS</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+                <ul id="slide-out" class="sidenav">
+                    <li>
+                        <div class="user-view">
+                        </div>
+                        <a href="#">JAVASCRIPT</a>
+                        <a href="#">SASS</a>
+                        <a href="#">ABOUT</a>
+                    </li>  
+                </ul>
+                <a href="#" data-target="slide-out" class="sidenav-trigger show-on-small"><i class="material-icons">dehaze</i></a>
+        </div>
+    </nav>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="./img/tree.jpg">
+        </div>
+        </div>
+        <div class="section white">
+            <div class="row container">
+                <h2 class="header">Parallax</h2>
+                <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
+            </div>
+        </div>
+        <div class="parallax-container">
+            <p id="javas">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis placeat omnis accusamus, aspernatur possimus aperiam excepturi ipsam iusto consequatur quibusdam.</p>
+            <div class="parallax"><img src="./img/deer.jpg"></div>
+      </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+     $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+    </script>
+</body>
+</html>
